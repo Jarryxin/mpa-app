@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时</title>
+</head>
+<body>
+<input id="text" />
+    <div style="border: 2px solid #000; width: 200px; height: 200px; display: flex; justify-content: center; align-items: center;
+;">
+
+        <span id="clock" style="width: 70px; color: orangered;"></span>
+        <button id="btn" style="height: 30px;" onclick="start()">倒计时开始</button>
+    </div>
+    <script type="text/javascript">
+        function start() {
+          let time = Number(document.getElementById('text').value) * 60
+          document.getElementById('clock').innerHTML = Math.floor(time/60)
+          let interval = setInterval(() => {
+            time -= 1
+            let timeText = Math.floor((time/60)) + ':' + time % 60
+            document.getElementById('clock').innerHTML = timeText
+            console.log(time)
+            if (time === 0) {
+              clearInterval(interval)
+            }
+          }, 1000)
+        }
+    </script>
+</body>
+</html>
