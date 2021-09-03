@@ -47,7 +47,7 @@
     "connected-react-router": "^6.5.2",
     "history": "^4.10.1",
     "http-proxy-middleware": "^0.20.0",
-    "immer": "^5.0.1",
+    "immer": "^9.0.6",
     "immutable": "^4.0.0-rc.12",
     "koa": "^2.8.1",
     "koa-bodyparser": "^4.2.1",
